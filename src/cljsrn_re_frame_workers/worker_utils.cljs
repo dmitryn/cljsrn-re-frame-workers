@@ -7,7 +7,7 @@
 
 ;; react requires
 (defonce ReactNative (js/require "react-native"))
-(defonce Worker (.-Worker (js/require "react-native-workers")))
+(defonce Worker (.-Thread (js/require "react-native-threads")))
 
 ;; Worker state
 (defonce worker (atom nil))                                 ;; worker ref stored here

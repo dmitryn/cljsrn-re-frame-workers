@@ -4,7 +4,7 @@
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
             [re-frame.db :refer [app-db]]))
 
-(defonce Self (.-self (js/require "react-native-workers"))) ;; "self" is the worker thread
+(defonce Self (.-self (js/require "react-native-threads"))) ;; "self" is the worker thread
 (defonce subscriptions (atom {}))                           ;; store all subscriptions here
 (defonce tr (t/reader :json))                               ;; transit writer for converting json data to clj
 (defonce tw (t/writer :json))                               ;; transit writer for converting clj data to json
